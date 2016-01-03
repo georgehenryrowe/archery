@@ -1,0 +1,44 @@
+[
+		{
+		"name": "archer1",
+		"noOfTargets": 0,
+		"lastScore": 0,
+		"totalScore": 0,
+		"avgScore": 0
+		},
+		{
+		"name": "archer2",
+		"noOfTargets": 0,
+		"lastScore": 0,
+		"totalScore": 0,
+		"avgScore": 0
+		},
+				{
+		"name": "archer3",
+		"noOfTargets": 0,
+		"lastScore": 0,
+		"totalScore": 0,
+		"avgScore": 0
+		},
+		{
+		"name": "archer4",
+		"noOfTargets": 0,
+		"lastScore": 0,
+		"totalScore": 0,
+		"avgScore": 0
+		},
+		{
+		"name": "archer5",
+		"noOfTargets": 0,
+		"lastScore": 0,
+		"totalScore": 0,
+		"avgScore": 0
+		},
+		{
+		"name": "archer6",
+		"noOfTargets": 0,
+		"lastScore": 0,
+		"totalScore": 0,
+		"avgScore": 0
+		}
+	]

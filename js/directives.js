@@ -5,11 +5,11 @@ myApp.directive('inputtext', function ($timeout) {
         restrict:'E',
         replace:true,
         template:'<input type="text"/>',
-        scope: { 
+        scope: {
         	//if there were attributes it would be shown here
         },
         link:function (scope, element, attrs, ctrl) {
-        	// DOM manipulation may happen here.      
+        	// DOM manipulation may happen here.
         }
     }
 });

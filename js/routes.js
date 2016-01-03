@@ -4,19 +4,19 @@ var myApp = angular.module('myApp', []);
 
 myApp.config(function($routeProvider) {
     $routeProvider.when(
-    	'/view1', 
+    	'/Scoreboard', 
     	{
-    		templateUrl: 'partials/partial1.html', 
+    		templateUrl: 'partials/archery_main.html', 
     		controller: 'MyCtrl1'
     	});
     $routeProvider.when(
-    	'/view2', 
+    	'/About', 
     	{
-    		templateUrl: 'partials/partial2.html', 
+    		templateUrl: 'partials/about.html', 
     		controller: 'MyCtrl2'
     	});
     $routeProvider.otherwise(
         {
-            redirectTo: '/view1'
+            redirectTo: '/Scoreboard'
         });
 });

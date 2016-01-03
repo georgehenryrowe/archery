@@ -1,0 +1,21 @@
+{
+  "name": "archery",
+  "description": "Archery scoreboard",
+  "main": "index.js",
+  "authors": [
+    "George Rowe <georgehenryrowe@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "none",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-audio": "~1.7.1"
+  }
+}
