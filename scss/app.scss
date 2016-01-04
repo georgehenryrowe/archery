@@ -1,14 +1,23 @@
 /* app scss stylesheet */
 /*http://paletton.com/#uid=72H0u0kumkgm8rJrloqBrfRMDas*/
+
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+$darkgreen: #00523d;
+$lightgreen: #2c9077;
+$red: #cf4059;
+
+
 html {
-  background-color: #00523d; }
+  background-color: $darkgreen;
+}
 
 body {
-  color: #2c9077;
+  color: $lightgreen;
   font-family: 'Inconsolata', Helvetica, Arial, sans-serif;
   font-size: 32px;
-  background: none; }
+  background:none;
+}
 
 /*.main:before {
   content: "";
@@ -28,90 +37,113 @@ body {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }*/
+
 .main {
-  width: 90%;
-  margin: 0 5% 5% 5%; }
+ width: 90%;
+ margin: 0 5% 5% 5%;
+}
 
 a {
-  color: #cf4059; }
+  color: $red;
+}
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 input {
-  background-color: #00523d;
-  border: 1px solid #2c9077;
+  background-color: $darkgreen;
+  border: 1px solid $lightgreen;
   color: #fff;
   height: 30px;
   width: 200px;
   font-size: 20px;
   border-radius: 5px;
-  padding-left: 4px; }
+  padding-left: 4px;
+}
 
 button {
   color: #fff;
-  background-color: #2c9077;
+  background-color: $lightgreen;
   height: 30px;
   font-size: 20px;
   border-radius: 5px;
-  border: 0; }
+  border: 0;
+}
 
 button:hover {
   background-color: #000;
-  cursor: crosshair; }
+  cursor: crosshair;
+}
 
 .important {
-  background-color: #cf4059; }
+  background-color: $red;
+}
 
 .rubbish {
   background-color: #fff;
-  color: #cf4059; }
+  color: $red;
+}
 
 .archer1 {
-  color: #cf4059; }
+  color: $red;
+}
 
 .archer2 {
-  color: #62be3b; }
+  color: #62be3b;
+}
 
 .archer3 {
-  color: #fff; }
+  color: #fff;
+}
 
 .archer4 {
-  color: #206D00; }
+  color: #206D00;
+}
 
 .archer5 {
-  color: #b61b36; }
+  color: #b61b36;
+}
 
 .archer6 {
-  color: #003629; }
+ color: #003629;
+}
 
 .blur {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
   -ms-filter: blur(2px);
-  filter: blur(2px); }
+  filter: blur(2px);
+}
 
 /*MENU*/
+
 .menu {
   display: block;
   margin: 20px 0 0 0;
   list-style: none;
-  float: right; }
+  float: right;
+}
 
 .menu:before {
-  content: "["; }
+  content: "[";
+}
 
 .menu:after {
-  content: "]"; }
+  content: "]";
+}
 
 .menu > li {
-  display: inline; }
+  display: inline;
+}
 
 .menu > li:before {
   content: "|";
-  padding-right: 0.3em; }
+  padding-right: 0.3em;
+}
 
 .menu > li:nth-child(1):before {
   content: "";
-  padding: 0; }
+  padding: 0;
+}

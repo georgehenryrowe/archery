@@ -1,7 +1,7 @@
 {
   "name": "archery",
   "version": "1.0.0",
-  "description": "white-angularjs-app ==========================",
+  "description": "Archery Scoreboard built with AngluarJS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,11 @@
     "url": "/Users/georgerowe/Sites/archery"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-ruby-sass": "^2.0.6"
+  }
 }
