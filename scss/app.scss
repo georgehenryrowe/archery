@@ -100,8 +100,8 @@ a:hover {
 }
 
 input {
-  background-color: $darkgreen;
-  border: 1px solid $lightgreen;
+  background-color: transparent;
+  border: 2px solid $lightgreen;
   color: #fff;
   height: 30px;
   width: 200px;
@@ -110,10 +110,22 @@ input {
   padding-left: 4px;
 }
 
+input:focus {
+  background-color: $darkgreen;
+}
+
+::selection {
+  background: $red;
+}
+
+::-moz-selection {
+  background: $red;
+}
+
 button {
   color: #fff;
   background-color: $lightgreen;
-  height: 30px;
+  height: 38px;
   font-size: 20px;
   border-radius: 5px;
   border: 0;

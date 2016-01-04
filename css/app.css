@@ -97,8 +97,8 @@ a:hover {
   text-decoration: underline; }
 
 input {
-  background-color: #00523d;
-  border: 1px solid #2c9077;
+  background-color: transparent;
+  border: 2px solid #2c9077;
   color: #fff;
   height: 30px;
   width: 200px;
@@ -106,10 +106,19 @@ input {
   border-radius: 5px;
   padding-left: 4px; }
 
+input:focus {
+  background-color: #00523d; }
+
+::selection {
+  background: #cf4059; }
+
+::-moz-selection {
+  background: #cf4059; }
+
 button {
   color: #fff;
   background-color: #2c9077;
-  height: 30px;
+  height: 38px;
   font-size: 20px;
   border-radius: 5px;
   border: 0; }

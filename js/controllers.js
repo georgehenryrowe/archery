@@ -1,7 +1,9 @@
 'use strict';
 
-myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc) {
+myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc, $localStorage, $sessionStorage) {
+
 	// GHR
+	$scope.$storage = $localStorage;
 	$scope.noOfArchers = 1;
 	$scope.archers = archers;
 	$scope.started = 0;
@@ -9,6 +11,7 @@ myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc) {
 		archers[archerNo].totalScore += score;
 		archers[archerNo].noOfTargets++;
 	};
+
     $scope.valueFromService = UtilSrvc.helloWorld("Amy");
 });
 

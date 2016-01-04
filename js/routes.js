@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngStorage']);
 
 myApp.config(function($routeProvider) {
     $routeProvider.when(

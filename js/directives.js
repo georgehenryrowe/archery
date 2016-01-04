@@ -21,3 +21,15 @@ myApp.directive('version', function(version) {
 });
 
 // you may add as much directives as you want below
+
+/*myApp.directive("archerScoreBlock", function(){
+  return {
+    restrict: "E",
+    templateUrl: "./partials/archerScoreBlock.html",
+    controllerAs: 'archerScoreBlock',
+    controller: function(){
+       var archerScoreBlock = this;
+       return archerScoreBlock.counter++;
+    };
+  };
+});*/
