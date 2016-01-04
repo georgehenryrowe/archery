@@ -6,6 +6,11 @@ myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc) {
 	$scope.archers = archers;
 	$scope.started = 0;
     $scope.valueFromService = UtilSrvc.helloWorld("Amy");
+    /*$scope.whosGo = function() {
+    	if (archers[0].noOfTargets > archers[1].noOfTargets) {
+    		ngClass =
+    	}
+    }*/
 });
 
 myApp.controller("MyCtrl2" ,function ($scope) {
