@@ -2,7 +2,11 @@
 /*http://paletton.com/#uid=72H0u0kumkgm8rJrloqBrfRMDas*/
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
 html {
-  background-color: #00523d; }
+  background: url("../assets/images/woods_640_darkblur.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 body {
   color: #2c9077;
@@ -32,11 +36,65 @@ body {
   width: 90%;
   margin: 0 5% 5% 5%; }
 
+.fadeIn {
+  -webkit-animation: fadeIn 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeIn 0.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadeIn 0.5s;
+  /* Internet Explorer */
+  -o-animation: fadeIn 0.5s;
+  /* Opera < 12.1 */
+  animation: fadeIn 0.5s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: 10px; }
+  to {
+    opacity: 1;
+    margin-left: 0px; } }
+/* Firefox < 16 */
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: 10px; }
+  to {
+    opacity: 1;
+    margin-left: 0px; } }
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: 10px; }
+  to {
+    opacity: 1;
+    margin-left: 0px; } }
+/* Internet Explorer */
+@-ms-keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: 10px; }
+  to {
+    opacity: 1;
+    margin-left: 0px; } }
+/* Opera < 12.1 */
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: 10px; }
+  to {
+    opacity: 1;
+    margin-left: 0px; } }
 a {
-  color: #cf4059; }
+  color: #cf4059;
+  text-decoration: none; }
 
 a:hover {
-  text-decoration: none; }
+  color: #575757; }
+
+.active {
+  text-decoration: underline; }
 
 input {
   background-color: #00523d;
@@ -57,7 +115,7 @@ button {
   border: 0; }
 
 button:hover {
-  background-color: #000;
+  background-color: #575757;
   cursor: crosshair; }
 
 .important {

@@ -1,3 +1,4 @@
+<div class="fadeIn">
 	<div ng-hide="started > 0" id="enterNames">
 
 		<h3>Enter names of Archers</h3>
@@ -13,7 +14,7 @@
 
 			<button ng-hide="noOfArchers > 5" ng-click="noOfArchers = noOfArchers + 1">Add Archer</button>
 
-			<button class="important" ng-click="started = 1">Start Shooting</button>
+			<button class="important" ng-click="started = 1" onclick="fanfareSound.play()">Start Shooting</button>
 
 		</form>
 
@@ -110,4 +111,5 @@
 				<button class="rubbish" ng-click="addScore(5, 0)" onclick="zeroSound.play()">0</button>
 			</div>
 	</div>
+</div>
 

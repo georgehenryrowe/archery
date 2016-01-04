@@ -10,3 +10,7 @@ var zeroSound = new Howl({
   urls: ['./assets/sound/didntquitekillhim.mp3']
 });
 
+var fanfareSound = new Howl({
+  urls: ['./assets/sound/fanfare.mp3']
+});
+

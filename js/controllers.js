@@ -1,23 +1,24 @@
 'use strict';
 
 myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc) {
-
+	// GHR
 	$scope.noOfArchers = 1;
 	$scope.archers = archers;
 	$scope.started = 0;
-
 	$scope.addScore = function(archerNo, score) {
 		archers[archerNo].totalScore += score;
 		archers[archerNo].noOfTargets++;
 	};
-
-
     $scope.valueFromService = UtilSrvc.helloWorld("Amy");
 });
 
 myApp.controller("MyCtrl2" ,function ($scope) {
 
 });
+
+myApp.controller("MenuController", function ($scope, $route) {
+	$scope.$route = $route;
+})
 
 // you may add more controllers below
 
