@@ -4,16 +4,16 @@ var myApp = angular.module('myApp', []);
 
 myApp.config(function($routeProvider) {
     $routeProvider.when(
-    	'/Scoreboard', 
+    	'/Scoreboard',
     	{
-    		templateUrl: 'partials/archery_main.html', 
+    		templateUrl: 'partials/archery_main.html',
     		controller: 'MyCtrl1',
             activetab: 'Scoreboard'
     	});
     $routeProvider.when(
-    	'/About', 
+    	'/About',
     	{
-    		templateUrl: 'partials/about.html', 
+    		templateUrl: 'partials/about.html',
     		controller: 'MyCtrl2',
             activetab: 'About'
     	});
