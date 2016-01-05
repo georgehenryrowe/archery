@@ -24,7 +24,7 @@
 		<h3 class="archer1">{{ archers[0].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
 			<p>Total Score: {{ archers[0].totalScore }} | Average Score: {{ archers[0].totalScore / archers[0].noOfTargets | number: 2 }} | Target Number: {{ archers[0].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(0, 24)" onclick="twentyfourSound.play()">24</button>
+				<button class="important" ng-click="addScore(0, 24); saveToLocal()" onclick="twentyfourSound.play()">24</button>
 				<button ng-click="addScore(0, 20)">20</button>
 				<button ng-click="addScore(0, 16)">16</button>
 				<button ng-click="addScore(0, 14)">14</button>

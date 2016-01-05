@@ -10,6 +10,7 @@ myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc, $localStorage, $sessionS
 	$scope.addScore = function(archerNo, score) {
 		archers[archerNo].totalScore += score;
 		archers[archerNo].noOfTargets++;
+		$localStorage.archers;
 	};
 
     $scope.valueFromService = UtilSrvc.helloWorld("Amy");
