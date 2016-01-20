@@ -1,40 +1,25 @@
 /* app scss stylesheet */
 /*http://paletton.com/#uid=72H0u0kumkgm8rJrloqBrfRMDas*/
-@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 html {
-  background: url("../assets/images/woods_640_darkblur.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAACxElEQVQ4T1WUy44cNRSGP9vlqu4eDcyETMR12MGKKBEXCSFxE5sIFixY8QzseAPeCuUlgBW3bCLIKMn0TNJVXRe77IOOJxUFS1aVu+3P/3/O322+v/OebC8v2LU9MVeE6Gn3M10biQnqVc08z2UaY6iqCuccOWdSSlhry7tO/d58++k70u57hjGQTc2+h8fbjnEQsBVV40hpLodfBOq7jhhjeYrI1Z4vbr4lYY6EmBDX0HaZx9sdaa4wzuNqyDmVzTpUnU5VqtBhGIpKBSrc3D49kpQz/TgVhSE6+hGsaUgIfmWfK1RbOhSgQH0q0HtfLIcQMJ+8eypTDGwvnhCzI+OZs8fZNf00sjnUzancrnVcrC9KFaJAVTiOI+brj27Lv2cPeHD2kHpzyMHhNR6dP2U/Ra4dXUdsIMbwXJVCVZXa3Ww2BbJarcq673vMB2+/KWKg7foCMXbNEGbmaDl46ZCQ9sWy2lNVClSIrhWkCtfrdVlP04S59cbrYqxl17Vc7Dqy1IitkOywvsJ6KZb1gE4FluIbQ9M0pXb61MvK53fe/1C2l+ecX1wyxIgYzxi0wIIYU7psrSkwHVrDJX9LpxWmF5SsfnXzloxhIpOIArtu4Gk3ECYhiRDShFelzwK8xGdR/GLIS8Nec16u3zjhxqsnjHPi/j9nBWiomCUz5/l/ltTi0mHtrCpTq0ukzOlqI1jh5eMjxFWcPXxEO01UrNAoi5HSTVWkDdCDdV0XqCpaoqRrjY/57vPP5JfffuVJu+Po+JiQMt1+BOPAVXT7PauDDd56pmlAs900Huc8KUWmKSKSaJo1m80K89OPP8iff9/j57t3GYaZV06Oi5KUYYyRaYaq9tRVUw7GqKoCJhusA4t2dyoXFOA3X34sWoPf//iLtm2LHc1ZxjBMgl83uOrKYvkDiFe/lupZjIxQbHvrSi7/A2Iv2oUPYs5xAAAAAElFTkSuQmCC");
+  height: 100%;
+  width: 100%; }
 
 body {
   color: #2c9077;
-  font-family: 'Inconsolata', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 32px;
   background: none; }
 
-/*.main:before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  background: url('../assets/images/woods_640.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-}*/
 .main {
   width: 90%;
   margin: 0 5% 5% 5%; }
+
+.paragraph {
+  width: 60%; }
 
 .fadeIn {
   -webkit-animation: fadeIn 0.5s;
@@ -96,6 +81,12 @@ a:hover {
 .active {
   text-decoration: underline; }
 
+h1, .menu {
+  font-family: "Playfair Display", serif; }
+
+.bold {
+  color: #fff; }
+
 input {
   background-color: transparent;
   border: 2px solid #2c9077;
@@ -121,11 +112,17 @@ button {
   height: 38px;
   font-size: 20px;
   border-radius: 5px;
-  border: 0; }
+  border: 0;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  min-width: 50px; }
 
 button:hover {
   background-color: #575757;
   cursor: crosshair; }
+
+.margin-top {
+  margin-top: 20px; }
 
 .important {
   background-color: #cf4059; }
@@ -182,3 +179,18 @@ button:hover {
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0; }
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 20px; }
+
+  .menu {
+    float: right;
+    margin: 0 0 20px 0; }
+
+  .paragraph {
+    width: 90%; }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px; } }

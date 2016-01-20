@@ -13,101 +13,117 @@
 			<input type="text" ng-model="archers[5].name" ng-show="noOfArchers >= 6" onclick="this.select()">
 
 			<button ng-hide="noOfArchers > 5" ng-click="noOfArchers = noOfArchers + 1">Add Archer</button>
-			<button class="important" ng-click="started = 1" onclick="fanfareSound.play()">Start Shooting</button>
+			<button class="important" ng-click="started = 1" onclick="playSound('fanfare')">Start Shooting</button>
 		</form>
 
 	</div>
 
 	<hr />
 
+	<!-- <button ng-click="checkLocalStorage()">Load last game</button> -->
+
 	<div ng-show="noOfArchers >= 1" id="archer1">
 		<h3 class="archer1">{{ archers[0].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
-			<p>Total Score: {{ archers[0].totalScore }} | Average Score: {{ archers[0].totalScore / archers[0].noOfTargets | number: 2 }} | Target Number: {{ archers[0].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(0, 24); saveToLocal()" onclick="twentyfourSound.play()">24</button>
+			<p>Total Score: <span class="bold">{{ archers[0].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[0].totalScore / archers[0].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[0].noOfTargets }}</span></p>
+				<button ng-click="addScore(0, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(0, 20)">20</button>
 				<button ng-click="addScore(0, 16)">16</button>
 				<button ng-click="addScore(0, 14)">14</button>
-				<button ng-click="addScore(0, 10)" onclick="tenSound.play()">10</button>
+				<button ng-click="addScore(0, 10)" onclick="playSound('ten')">10</button>
 				<button ng-click="addScore(0, 8)">8</button>
 				<button ng-click="addScore(0, 4)">4</button>
-				<button class="rubbish" ng-click="addScore(0, 0)" onclick="zeroSound.play()">0</button>
+				<button ng-click="addScore(0, 0)" class="rubbish" onclick="playSound('didntquitekillhim')">0</button>
+				<button ng-click="deleteLastScore(0)" class="important">Delete last score</button>
 		</div>
 	</div>
 
 	<div ng-show="noOfArchers >= 2" id="archer2">
 		<h3 class="archer2">{{ archers[1].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
-			<p>Total Score: {{ archers[1].totalScore }} | Average Score: {{ archers[1].totalScore / archers[1].noOfTargets | number: 2 }} | Target Number: {{ archers[1].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(1, 24)" onclick="twentyfourSound.play()">24</button>
+			<p>Total Score: <span class="bold">{{ archers[1].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[1].totalScore / archers[1].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[1].noOfTargets }}</span></p>
+				<button ng-click="addScore(1, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(1, 20)">20</button>
 				<button ng-click="addScore(1, 16)">16</button>
 				<button ng-click="addScore(1, 14)">14</button>
-				<button ng-click="addScore(1, 10)" onclick="tenSound.play()">10</button>
+				<button ng-click="addScore(1, 10)" onclick="playSound('ten')">10</button>
 				<button ng-click="addScore(1, 8)">8</button>
 				<button ng-click="addScore(1, 4)">4</button>
-				<button class="rubbish" ng-click="addScore(1, 0)" onclick="zeroSound.play()">0</button>
+				<button ng-click="addScore(1, 0)" class="rubbish" onclick="playSound('didntquitekillhim')">0</button>
+				<button ng-click="deleteLastScore(1)" class="important">Delete last score</button>
+
 		</div>
 	</div>
 
 	<div ng-show="noOfArchers >= 3" id="archer3">
 		<h3 class="archer3">{{ archers[2].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
-			<p>Total Score: {{ archers[2].totalScore }} | Average Score: {{ archers[2].totalScore / archers[2].noOfTargets | number: 2 }} | Target Number: {{ archers[2].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(2, 24)" onclick="twentyfourSound.play()">24</button>
+			<p>Total Score: <span class="bold">{{ archers[2].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[2].totalScore / archers[2].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[2].noOfTargets }}</span></p>
+				<button ng-click="addScore(2, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(2, 20)">20</button>
 				<button ng-click="addScore(2, 16)">16</button>
 				<button ng-click="addScore(2, 14)">14</button>
-				<button ng-click="addScore(2, 10)" onclick="tenSound.play()">10</button>
+				<button ng-click="addScore(2, 10)" onclick="playSound('ten')">10</button>
 				<button ng-click="addScore(2, 8)">8</button>
 				<button ng-click="addScore(2, 4)">4</button>
-				<button class="rubbish" ng-click="addScore(2, 0)" onclick="zeroSound.play()">0</button>
+				<button ng-click="addScore(2, 0)" class="rubbish" onclick="playSound('didntquitekillhim')">0</button>
+				<button ng-click="deleteLastScore(2)" class="important">Delete last score</button>
+
 		</div>
 	</div>
 
 	<div ng-show="noOfArchers >= 4" id="archer4">
 		<h3 class="archer4">{{ archers[3].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
-			<p>Total Score: {{ archers[3].totalScore }} | Average Score: {{ archers[3].totalScore / archers[3].noOfTargets | number: 2 }} | Target Number: {{ archers[3].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(3, 24)" onclick="twentyfourSound.play()">24</button>
+			<p>Total Score: <span class="bold">{{ archers[3].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[3].totalScore / archers[3].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[3].noOfTargets }}</span></p>
+				<button ng-click="addScore(3, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(3, 20)">20</button>
 				<button ng-click="addScore(3, 16)">16</button>
 				<button ng-click="addScore(3, 14)">14</button>
-				<button ng-click="addScore(3, 10)" onclick="tenSound.play()">10</button>
+				<button ng-click="addScore(3, 10)" onclick="playSound('ten')">10</button>
 				<button ng-click="addScore(3, 8)">8</button>
 				<button ng-click="addScore(3, 4)">4</button>
-				<button class="rubbish" ng-click="addScore(3, 0)" onclick="zeroSound.play()">0</button>
+				<button ng-click="addScore(3, 0)" class="rubbish" onclick="playSound('didntquitekillhim')">0</button>
+				<button ng-click="deleteLastScore(3)" class="important">Delete last score</button>
+
 		</div>
 	</div>
 
 	<div ng-show="noOfArchers >= 5" id="archer5">
 		<h3 class="archer5">{{ archers[4].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
-			<p>Total Score: {{ archers[4].totalScore }} | Average Score: {{ archers[4].totalScore / archers[4].noOfTargets | number: 2 }} | Target Number: {{ archers[4].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(4, 24)" onclick="twentyfourSound.play()">24</button>
+			<p>Total Score: <span class="bold">{{ archers[4].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[4].totalScore / archers[4].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[4].noOfTargets }}</span></p>
+				<button ng-click="addScore(4, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(4, 20)">20</button>
 				<button ng-click="addScore(4, 16)">16</button>
 				<button ng-click="addScore(4, 14)">14</button>
-				<button ng-click="addScore(4, 10)" onclick="tenSound.play()">10</button>
+				<button ng-click="addScore(4, 10)" onclick="playSound('ten')">10</button>
 				<button ng-click="addScore(4, 8)">8</button>
 				<button ng-click="addScore(4, 4)">4</button>
-				<button class="rubbish" ng-click="addScore(4, 0)" onclick="zeroSound.play()">0</button>
+				<button ng-click="addScore(4, 0)" class="rubbish" onclick="playSound('didntquitekillhim')">0</button>
+				<button ng-click="deleteLastScore(4)" class="important">Delete last score</button>
+
 		</div>
 	</div>
 
 	<div ng-show="noOfArchers >= 6" id="archer6">
 		<h3 class="archer6">{{ archers[5].name }}</h3>
 		<div ng-show="started > 0" class="scoring">
-			<p>Total Score: {{ archers[5].totalScore }} | Average Score: {{ archers[5].totalScore / archers[5].noOfTargets | number: 2 }} | Target Number: {{ archers[5].noOfTargets }}</p>
-				<button class="important" ng-click="addScore(5, 24)" onclick="twentyfourSound.play()">24</button>
+			<p>Total Score: <span class="bold">{{ archers[5].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[5].totalScore / archers[5].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[5].noOfTargets }}</span></p>
+				<button ng-click="addScore(5, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(5, 20)">20</button>
 				<button ng-click="addScore(5, 16)">16</button>
 				<button ng-click="addScore(5, 14)">14</button>
-				<button ng-click="addScore(5, 10)" onclick="tenSound.play()">10</button>
+				<button ng-click="addScore(5, 10)" onclick="playSound('ten')">10</button>
 				<button ng-click="addScore(5, 8)">8</button>
 				<button ng-click="addScore(5, 4)">4</button>
-				<button class="rubbish" ng-click="addScore(5, 0)" onclick="zeroSound.play()">0</button>
+				<button ng-click="addScore(5, 0)" class="rubbish" onclick="playSound('didntquitekillhim')">0</button>
+				<button ng-click="deleteLastScore(5)" class="important">Delete last score</button>
+
 			</div>
 	</div>
+
+	<!-- <button class="important margin-top" ng-click="clearLocalStorage()">Clear Saved Scores</button> -->
+
 </div>
 

@@ -1,16 +1,6 @@
-var tenSound = new Howl({
-  urls: ['./assets/sound/ten.mp3']
-});
-
-var twentyfourSound = new Howl({
-  urls: ['./assets/sound/thatsfirstclass.mp3']
-});
-
-var zeroSound = new Howl({
-  urls: ['./assets/sound/didntquitekillhim.mp3']
-});
-
-var fanfareSound = new Howl({
-  urls: ['./assets/sound/fanfare.mp3']
-});
-
+function playSound(file) {
+	new Howl({
+		urls: ['./assets/sounds/' + file + '.mp3'],
+		autoplay: true
+	});
+};

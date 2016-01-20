@@ -23,5 +23,6 @@
   "templateDefaultPage": "index",
   "templateDirectory": "templates",
   "type": "simple",
-  "useCompass": false
+  "useCompass": false,
+  "optimiseImages": true
 }

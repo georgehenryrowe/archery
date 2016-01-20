@@ -7,10 +7,28 @@ myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc, $localStorage, $sessionS
 	$scope.noOfArchers = 1;
 	$scope.archers = archers;
 	$scope.started = 0;
+
 	$scope.addScore = function(archerNo, score) {
+		archers[archerNo].lastScore = score;
 		archers[archerNo].totalScore += score;
 		archers[archerNo].noOfTargets++;
-		$localStorage.archers;
+		$localStorage['archers'] = JSON.stringify(archers);
+	};
+
+	$scope.deleteLastScore = function(archerNo) {
+		archers[archerNo].totalScore -= archers[archerNo].lastScore;
+		archers[archerNo].noOfTargets--;
+	}
+
+	$scope.checkLocalStorage = function() {
+		if ($localStorage.archers.noOfTargets > 0) {
+			var storedData = JSON.parse($localStorage['archers']);
+			archers = storedData;
+		};
+	};
+
+	$scope.clearLocalStorage = function() {
+		$localStorage.$reset();
 	};
 
     $scope.valueFromService = UtilSrvc.helloWorld("Amy");
