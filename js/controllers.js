@@ -9,23 +9,25 @@ myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc, $localStorage, $sessionS
 	$scope.started = 0;
 
 	$scope.addScore = function(archerNo, score) {
-		archers[archerNo].lastScore = score;
-		archers[archerNo].totalScore += score;
-		archers[archerNo].noOfTargets++;
+		archers[archerNo].targetScores.push(score);
+
+		for (var i = 0; i < archers[archerNo].targetScores.length; i++) {
+			archers[archerNo].totalScore += archers[archerNo].targetScores[i];
+		};
+
 		$localStorage['archers'] = JSON.stringify(archers);
 	};
 
 	$scope.deleteLastScore = function(archerNo) {
-		archers[archerNo].totalScore -= archers[archerNo].lastScore;
-		archers[archerNo].noOfTargets--;
-	}
+		archers[archerNo].targetScores.pop();
+	};
 
-	$scope.checkLocalStorage = function() {
+/*	$scope.checkLocalStorage = function() {
 		if ($localStorage.archers.noOfTargets > 0) {
 			var storedData = JSON.parse($localStorage['archers']);
 			archers = storedData;
 		};
-	};
+	};*/
 
 	$scope.clearLocalStorage = function() {
 		$localStorage.$reset();
@@ -47,38 +49,38 @@ myApp.controller("MenuController", function ($scope, $route) {
 var archers = [
 		{
 		name: "Archer 1",
-		noOfTargets: 0,
-		lastScore: 0,
+		// noOfTargets: 0,
+		targetScores: [],
 		totalScore: 0
 		},
 		{
 		name: "Archer 2",
-		noOfTargets: 0,
-		lastScore: 0,
+		// noOfTargets: 0,
+		targetScores: [],
 		totalScore: 0
 		},
 		{
 		name: "Archer 3",
-		noOfTargets: 0,
-		lastScore: 0,
+		// noOfTargets: 0,
+		targetScores: [],
 		totalScore: 0
 		},
 				{
 		name: "Archer 4",
-		noOfTargets: 0,
-		lastScore: 0,
+		// noOfTargets: 0,
+		targetScores: [],
 		totalScore: 0
 		},
 				{
 		name: "Archer 5",
-		noOfTargets: 0,
-		lastScore: 0,
+		// noOfTargets: 0,
+		targetScores: [],
 		totalScore: 0
 		},
 		{
 		name: "Archer 6",
-		noOfTargets: 0,
-		lastScore: 0,
+		// noOfTargets: 0,
+		targetScores: [],
 		totalScore: 0
 		},
 	];
