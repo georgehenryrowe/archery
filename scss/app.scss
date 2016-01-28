@@ -9,9 +9,10 @@ $darkgreen: #00523d;
 $lightgreen: #2c9077;
 $red: #cf4059;
 $rollover: #575757;
+$white: #fff;
 
 $serif: 'Playfair Display', serif;
-$sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
+$sans-serif: Helvetica, Arial, sans-serif;
 
 html {
   // background-color: $darkgreen;
@@ -97,13 +98,13 @@ h1,.menu {
 }
 
 .bold {
-  color: #fff;
+  color: $white;
 }
 
 input {
   background-color: transparent;
   border: 2px solid $lightgreen;
-  color: #fff;
+  color: $white;
   height: 30px;
   width: 200px;
   font-size: 20px;
@@ -124,7 +125,7 @@ input:focus {
 }
 
 button {
-  color: #fff;
+  color: $white;
   background-color: $lightgreen;
   height: 38px;
   font-size: 20px;
@@ -149,7 +150,7 @@ button:hover {
 }
 
 .rubbish {
-  background-color: #fff;
+  background-color: $white;
   color: $red;
 }
 
@@ -162,7 +163,7 @@ button:hover {
 }
 
 .archer3 {
-  color: #fff;
+  color: $white;
 }
 
 .archer4 {

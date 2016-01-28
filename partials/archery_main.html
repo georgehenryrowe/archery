@@ -23,10 +23,12 @@
 	<!-- <button ng-click="checkLocalStorage()">Load last game</button> -->
 
 	<div ng-show="noOfArchers >= 1" id="archer1">
-		<h3 class="archer1">{{ archers[0].name }}</h3>
+		<h2 class="archer1">{{ archers[0].name }}</h2>
 		<div ng-show="started > 0" class="scoring">
+
 			<p>Total Score: <span class="bold">{{ archers[0].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[0].totalScore / archers[0].targetScores.length | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[0].targetScores.length+1 }}</span></p>
-				<button ng-click="addScore(0, 24); totalTheScore(0)" class="important" onclick="playSound('thatsfirstclass')">24</button>
+
+				<button ng-click="addScore(0, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(0, 20)">20</button>
 				<button ng-click="addScore(0, 16)">16</button>
 				<button ng-click="addScore(0, 14)">14</button>
@@ -39,9 +41,11 @@
 	</div>
 
 	<div ng-show="noOfArchers >= 2" id="archer2">
-		<h3 class="archer2">{{ archers[1].name }}</h3>
+		<h2 class="archer2">{{ archers[1].name }}</h2>
 		<div ng-show="started > 0" class="scoring">
+
 			<p>Total Score: <span class="bold">{{ archers[1].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[1].totalScore / archers[1].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[1].targetScores.length+1 }}</span></p>
+
 				<button ng-click="addScore(1, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(1, 20)">20</button>
 				<button ng-click="addScore(1, 16)">16</button>
@@ -56,9 +60,11 @@
 	</div>
 
 	<div ng-show="noOfArchers >= 3" id="archer3">
-		<h3 class="archer3">{{ archers[2].name }}</h3>
+		<h2 class="archer3">{{ archers[2].name }}</h2>
 		<div ng-show="started > 0" class="scoring">
+
 			<p>Total Score: <span class="bold">{{ archers[2].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[2].totalScore / archers[2].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[2].targetScores.length+1 }}</span></p>
+
 				<button ng-click="addScore(2, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(2, 20)">20</button>
 				<button ng-click="addScore(2, 16)">16</button>
@@ -73,9 +79,11 @@
 	</div>
 
 	<div ng-show="noOfArchers >= 4" id="archer4">
-		<h3 class="archer4">{{ archers[3].name }}</h3>
+		<h2 class="archer4">{{ archers[3].name }}</h2>
 		<div ng-show="started > 0" class="scoring">
+
 			<p>Total Score: <span class="bold">{{ archers[3].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[3].totalScore / archers[3].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[3].targetScores.length+1 }}</span></p>
+
 				<button ng-click="addScore(3, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(3, 20)">20</button>
 				<button ng-click="addScore(3, 16)">16</button>
@@ -90,9 +98,11 @@
 	</div>
 
 	<div ng-show="noOfArchers >= 5" id="archer5">
-		<h3 class="archer5">{{ archers[4].name }}</h3>
+		<h2 class="archer5">{{ archers[4].name }}</h2>
 		<div ng-show="started > 0" class="scoring">
+
 			<p>Total Score: <span class="bold">{{ archers[4].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[4].totalScore / archers[4].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[4].targetScores.length+1 }}</span></p>
+
 				<button ng-click="addScore(4, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(4, 20)">20</button>
 				<button ng-click="addScore(4, 16)">16</button>
@@ -107,9 +117,11 @@
 	</div>
 
 	<div ng-show="noOfArchers >= 6" id="archer6">
-		<h3 class="archer6">{{ archers[5].name }}</h3>
+		<h2 class="archer6">{{ archers[5].name }}</h2>
 		<div ng-show="started > 0" class="scoring">
+
 			<p>Total Score: <span class="bold">{{ archers[5].totalScore }}</span> | Avg. Score: <span class="bold">{{ archers[5].totalScore / archers[5].noOfTargets | number: 2 }}</span> | Target Number: <span class="bold">{{ archers[5].targetScores.length+1 }}</span></p>
+
 				<button ng-click="addScore(5, 24)" class="important" onclick="playSound('thatsfirstclass')">24</button>
 				<button ng-click="addScore(5, 20)">20</button>
 				<button ng-click="addScore(5, 16)">16</button>

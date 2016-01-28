@@ -2,24 +2,32 @@
 
 myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc, $localStorage, $sessionStorage) {
 
-	// GHR
+	// setting things up
 	$scope.$storage = $localStorage;
 	$scope.noOfArchers = 1;
 	$scope.archers = archers;
 	$scope.started = 0;
 
 	$scope.addScore = function(archerNo, score) {
+		// add score to the array of scores
 		archers[archerNo].targetScores.push(score);
-
+		// loop through array and add all the scores together
+		archers[archerNo].totalScore = 0;
 		for (var i = 0; i < archers[archerNo].targetScores.length; i++) {
 			archers[archerNo].totalScore += archers[archerNo].targetScores[i];
 		};
-
+		// stringify data and add to local storage
 		$localStorage['archers'] = JSON.stringify(archers);
 	};
 
 	$scope.deleteLastScore = function(archerNo) {
+		// remove last score from array
 		archers[archerNo].targetScores.pop();
+		// add array back up again
+		archers[archerNo].totalScore = 0;
+		for (var i = 0; i < archers[archerNo].targetScores.length; i++) {
+			archers[archerNo].totalScore += archers[archerNo].targetScores[i];
+		};
 	};
 
 /*	$scope.checkLocalStorage = function() {
